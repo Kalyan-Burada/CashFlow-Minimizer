@@ -1,87 +1,125 @@
 # 💰 Cash Flow Minimizer — Bank Transaction Management System
 
-A Python-based system that manages inter-bank transactions, predicts cash flow, generates financial reports, and minimizes outstanding balances using optimized settlements.
+A Python-based system to manage inter-bank transactions, analyze financial activity, predict cash flow, and minimize settlement transfers using optimized algorithms.
 
-This project allows banks to record transactions, track balances, analyze payment behavior, and automatically compute the minimum number of settlement transfers required.
+This project enables banks to efficiently track balances, understand transaction behavior, and reduce the number of required settlements.
 
 ---
 
 ## 🚀 Features
 
 ### 🏦 Bank & Transaction Management
-- Add banks with supported payment types (credit / debit)
-- Record transactions with timestamp history
-- Track net balances dynamically
-- Clear specific transactions
+- Add banks with supported payment types (credit/debit)
+- Record transactions with timestamps
+- Track real-time net balances
+- Clear or manage specific transactions
+
+---
 
 ### 📊 Analytics & Reporting
-- Monthly summaries
+- Monthly financial summaries
 - Bank statements with date filters
-- Transaction reports with averages
+- Transaction statistics (totals & averages)
 - Most active bank detection
 - Top debtor & creditor identification
 
+---
+
 ### 🤖 Predictive Insights
-- Predict cash flow for future days based on trends
-- Estimate incoming & outgoing flows
+- Forecast future cash flow trends
+- Estimate incoming and outgoing funds
+- Analyze transaction patterns
+
+---
 
 ### ⚖️ Cash Flow Minimization
-- Matches debtors & creditors
-- Minimizes number of settlements
-- Computes optimal transaction graph
+- Identifies debtors and creditors
+- Matches balances efficiently
+- Minimizes number of settlement transactions
+- Generates optimized transaction graph
+
+---
 
 ### 🔍 Filtering & Querying
-- Filter by:
-  - date range
-  - amount range
-  - bank name / keywords
+- Filter transactions by:
+  - Date range
+  - Amount range
+  - Bank name or keywords
 - Calculate interest on outstanding balances
 
 ---
 
 ## 🧩 Tech Stack
 
-| Component | Technology |
-|---------|----------|
-| Language | Python |
+| Component        | Technology |
+|----------------|----------|
+| Language        | Python |
 | Data Structures | Min Heap, Graph |
-| Time Handling | `datetime` |
-| CLI | Interactive text menu |
+| Time Handling   | datetime |
+| CLI Interface   | Interactive Menu |
+| Frontend        | React + Vite + Tailwind CSS |
+| Backend (Planned)| Python API |
 
 ---
 
 ## 🏃‍♂️ How to Run
 
+### 🔧 Backend (Python CLI)
+
 1. Install Python (3.8+ recommended)
 
-2. Save the project file as:
-
+2. Save the file as:
 ```
 cashflow.py
 ```
 
-3. Run the program
-
+3. Run the program:
 ```bash
 python cashflow.py
 ```
 
-4. Use the interactive menu to perform operations
+4. Use the interactive CLI menu
+
+---
+
+### 🌐 Frontend (React)
+
+1. Install dependencies:
+```bash
+npm install
+```
+
+2. Run development server:
+```bash
+npm run dev
+```
+
+3. Open in browser:
+```
+http://localhost:5173
+```
 
 ---
 
 ## 🧠 Core Algorithm — Cash Flow Minimization
 
-The system:
-1. Identifies banks with negative balances (debtors)
-2. Identifies banks with positive balances (creditors)
-3. Uses a Min-Heap to match optimized transfers
-4. Reduces total settlement transactions
+### ⚙️ Working:
 
-This ensures:
-- Lower transaction costs
-- Faster settlement cycles
-- Efficient fund flow
+1. Calculate net balance of each bank  
+2. Separate:
+   - Debtors (negative balance)
+   - Creditors (positive balance)  
+3. Use Min Heap / Priority Queue  
+4. Match smallest debtor with largest creditor  
+5. Repeat until all balances are settled  
+
+---
+
+### ✅ Benefits:
+- Reduces total number of transactions  
+- Optimizes settlement flow  
+- Saves transaction costs  
+- Improves financial efficiency  
 
 ---
 
@@ -89,36 +127,74 @@ This ensures:
 
 ```
 CashFlow-Minimizer/
-│── cashflow.py
-│── README.md
-│── .gitignore   (optional)
+│── cashFlow.py          # Backend logic (Python)
+│── src/                 # React frontend
+│   ├── components/      # UI components
+│   ├── hooks/           # Custom hooks (useCashFlow)
+│   ├── lib/             # Utility functions
+│   └── pages/           # Application pages
+│── package.json         # Node dependencies
+│── vite.config.ts       # Vite config
+└── tailwind.config.ts   # Tailwind CSS config
 ```
 
 ---
 
-## 📝 Future Enhancements (Suggested)
+## 🛠 Development Timeline
 
-- Database storage (SQLite / MongoDB)
-- Web dashboard UI
-- Fraud / anomaly detection
-- Visualization charts
-- Export statements to PDF / Excel
+### ✅ Completed
+- Project setup with Vite + React + Tailwind CSS  
+- TypeScript, ESLint, and Shadcn configuration  
+- Base architecture and routing setup  
+- Utility functions and global styles  
+
+---
+
+### 🚧 In Progress / Planned
+
+#### 🎨 UI Development
+- Reusable Shadcn UI components  
+- Forms (Add Bank, Transactions)  
+- Notifications & Modals  
+
+#### ⚙️ Business Logic
+- useCashFlow hook  
+- Integration with Python backend  
+
+#### 📊 Dashboard
+- Analytics panels  
+- Summary cards  
+- Cash flow visualization graph  
+
+#### 🗄 Backend Enhancements
+- Database (SQLite / MongoDB)  
+- API integration  
+- Fraud / anomaly detection  
+
+#### 📈 Advanced Features
+- Charts & graphs  
+- Export reports (PDF / Excel)  
+- Real-time analytics  
 
 ---
 
 ## 🤝 Contributions
 
-Pull requests and feature suggestions are welcome.
+Contributions are welcome!
+
+- Fork the repository  
+- Create a feature branch  
+- Submit a pull request  
 
 ---
 
 ## 📜 License
 
-This project is open-source for academic and learning purposes.
+This project is open-source and intended for academic and learning purposes.
 
 ---
 
 ## 👤 Author
 
-Developed by Kalyan  
-Cash Flow Optimization
+Kalyan  
+Cash Flow Optimization System
