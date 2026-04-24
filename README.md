@@ -36,7 +36,7 @@ This project enables banks to efficiently track balances, understand transaction
 - Identifies debtors and creditors
 - Matches balances efficiently
 - Minimizes number of settlement transactions
-- Generates optimized transaction graph
+- Generates optimized transaction graph with interactive node-edge visualizations
 
 ---
 
